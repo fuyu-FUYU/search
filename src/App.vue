@@ -1,32 +1,37 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="" style="margin:30px">
+        <search
+          v-model="value"
+        ></search>
+
+        
+        {{value}}
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import search from "@/components/Search.vue"
+export default {
+name:"",
+components:{
+  search
+},
+data() {
+return {
+    value:'11111'
 }
+},
+//生命周期 - 创建完成（访问当前this实例）
+created() {
 
-#nav {
-  padding: 30px;
-}
+},
+//生命周期 - 挂载完成（访问DOM元素）
+mounted() {
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
 }
+}
+</script>
+<style scoped>
+/* @import url(); 引入css类 */
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
